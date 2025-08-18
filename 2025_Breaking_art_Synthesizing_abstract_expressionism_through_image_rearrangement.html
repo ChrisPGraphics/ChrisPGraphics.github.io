@@ -21,6 +21,24 @@
         .mr-1{
             margin-right: .25rem !important;
         }
+
+        /* This element defines the size the iframe will take.
+   In this example we want to have a ratio of 25:14 */
+.aspect-ratio {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* The height of the item will now be 56.25% of the width. */
+}
+
+/* Adjust the iframe so it's rendered in the outer-width and outer-height of it's parent */
+.aspect-ratio iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
     </style>
 </head>
 <body>
@@ -67,10 +85,24 @@
 
     
         
+            
     <div class="card mb-3">
         <div class="card-body pt-2 pb-0">
             <h2 class="h3">Abstract</h2>
 
+            
+                <div class="row px-2">
+                
+                    
+    
+        <img
+                src="static/images/breaking_art/teaser.png" alt="Teaser image" class="img-fluid"
+                onclick="showFullscreenFigure(`static/images/breaking_art/teaser.png`, `Teaser image`, `Abstract`)" style="cursor: pointer"
+        >
+    
+
+                
+                </div>
             
 
             
@@ -79,6 +111,7 @@
         </div>
     </div>
 
+        
     
 
     
@@ -89,15 +122,16 @@
 
             
                 <div class="row px-2">
+                
                     
-                        <div class="col-sm-4 px-1 py-1" style="vertical-align: middle;">
-                            
     
-        <img src="static/images/results.png" alt="Four results of our algorithm with their exemplar" class="img-fluid">
+        <img
+                src="static/images/breaking_art/results.png" alt="Four results of our algorithm with their exemplar" class="img-fluid"
+                onclick="showFullscreenFigure(`static/images/breaking_art/results.png`, `Four results of our algorithm with their exemplar`, `Some Results`)" style="cursor: pointer"
+        >
     
 
-                        </div>
-                    
+                
                 </div>
             
 
@@ -115,15 +149,15 @@
 
             
                 <div class="row px-2">
+                
                     
-                        <div class="col-sm-4 px-1 py-1" style="vertical-align: middle;">
-                            
     
-        <iframe src="https://www.youtube.com/embed/JAzxg2WRWDw" class="w-100" style="height: 100%;" title="A video walking through a 3D art gallery where our results are on display."></iframe>
+        <div class="aspect-ratio">
+            <iframe src="https://www.youtube.com/embed/JAzxg2WRWDw" class="w-100 img-fluid" title="A video walking through a 3D art gallery where our results are on display." allow="fullscreen;"></iframe>
+        </div>
     
 
-                        </div>
-                    
+                
                 </div>
             
 
@@ -141,15 +175,16 @@
 
             
                 <div class="row px-2">
+                
                     
-                        <div class="col-sm-4 px-1 py-1" style="vertical-align: middle;">
-                            
     
-        <img src="static/images/process.png" alt="A high-level overview of our analysis and synthesis processes" class="img-fluid">
+        <img
+                src="static/images/breaking_art/process.png" alt="A high-level overview of our analysis and synthesis processes" class="img-fluid"
+                onclick="showFullscreenFigure(`static/images/breaking_art/process.png`, `A high-level overview of our analysis and synthesis processes`, `Analysis and Synthesis`)" style="cursor: pointer"
+        >
     
 
-                        </div>
-                    
+                
                 </div>
             
 
@@ -167,15 +202,16 @@
 
             
                 <div class="row px-2">
+                
                     
-                        <div class="col-sm-4 px-1 py-1" style="vertical-align: middle;">
-                            
     
-        <img src="static/images/failure_cases.png" alt="Three failure cases when the exemplar does not contain distinct features." class="img-fluid">
+        <img
+                src="static/images/breaking_art/failure_cases.png" alt="Three failure cases when the exemplar does not contain distinct features." class="img-fluid"
+                onclick="showFullscreenFigure(`static/images/breaking_art/failure_cases.png`, `Three failure cases when the exemplar does not contain distinct features.`, `Failure Cases`)" style="cursor: pointer"
+        >
     
 
-                        </div>
-                    
+                
                 </div>
             
 
@@ -324,7 +360,60 @@
 }
 </script>
 
+<script>
+    function showModal(id){
+        $("#" + id).modal("show")
+    }
+    function hideModal(id){
+        $("#" + id).modal("hide")
+    }
+    function toggleModal(id){
+        $("#" + id).modal("toggle")
+    }
+
+    function removeElement(elementId) {
+        let elem = document.getElementById(elementId);
+        elem.parentNode.removeChild(elem);
+    }
+
+    function showFullscreenFigure(url, alt, title){
+        let alertBox = document.createElement("div");
+
+        alertBox.id = Date.now().toString();
+
+        alertBox.innerHTML = `
+            <div class="modal fade" id="${ alertBox.id }_modal">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+
+
+<div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title fs-5" id="fullscreenImage">${ title }</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="${ url }" alt="${ alt }" class="img-fluid">
+      </div>
+
+    </div>
+
+
+                </div>
+            </div>
+        `;
+
+        document.body.appendChild(alertBox);
+
+        showModal(alertBox.id + "_modal");
+
+        $('#' + alertBox.id + "_modal").on('hide.bs.modal', function () {
+            removeElement(alertBox.id);
+        });
+    }
+</script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
 

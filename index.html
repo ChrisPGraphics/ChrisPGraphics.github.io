@@ -21,6 +21,24 @@
         .mr-1{
             margin-right: .25rem !important;
         }
+
+        /* This element defines the size the iframe will take.
+   In this example we want to have a ratio of 25:14 */
+.aspect-ratio {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* The height of the item will now be 56.25% of the width. */
+}
+
+/* Adjust the iframe so it's rendered in the outer-width and outer-height of it's parent */
+.aspect-ratio iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
     </style>
 </head>
 <body>
@@ -59,7 +77,10 @@
 
         <div class="w-100" style="min-height: 85px; margin-bottom: 10px">
             
-            <img src="https://people.scs.carleton.ca/~olivervankaick/img/BreakingArt.png" height="85" width="150" class="float-left" alt="Breaking art: Synthesizing abstract expressionism through image rearrangement Teaser Image">
+            <img
+                    src="static/images/breaking_art/teaser.png" height="85" width="150" class="float-left" alt="Breaking art: Synthesizing abstract expressionism through image rearrangement Teaser Image" style="object-fit: cover; cursor: pointer"
+                    onclick="showFullscreenFigure('static/images/breaking_art/teaser.png', 'alt', `Breaking art: Synthesizing abstract expressionism through image rearrangement`)"
+            >
             
 
             <div style="padding-left: 160px">
@@ -266,7 +287,60 @@
 }
 </script>
 
+<script>
+    function showModal(id){
+        $("#" + id).modal("show")
+    }
+    function hideModal(id){
+        $("#" + id).modal("hide")
+    }
+    function toggleModal(id){
+        $("#" + id).modal("toggle")
+    }
+
+    function removeElement(elementId) {
+        let elem = document.getElementById(elementId);
+        elem.parentNode.removeChild(elem);
+    }
+
+    function showFullscreenFigure(url, alt, title){
+        let alertBox = document.createElement("div");
+
+        alertBox.id = Date.now().toString();
+
+        alertBox.innerHTML = `
+            <div class="modal fade" id="${ alertBox.id }_modal">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+
+
+<div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title fs-5" id="fullscreenImage">${ title }</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="${ url }" alt="${ alt }" class="img-fluid">
+      </div>
+
+    </div>
+
+
+                </div>
+            </div>
+        `;
+
+        document.body.appendChild(alertBox);
+
+        showModal(alertBox.id + "_modal");
+
+        $('#' + alertBox.id + "_modal").on('hide.bs.modal', function () {
+            removeElement(alertBox.id);
+        });
+    }
+</script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
 
