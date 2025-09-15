@@ -39,6 +39,10 @@
   left: 0;
   top: 0;
 }
+
+.csl-left-margin{
+    display: none;
+}
     </style>
 
 
@@ -49,6 +53,8 @@
 
 </head>
 <body>
+
+
 
 
 
@@ -181,8 +187,9 @@
       </div>
       <div class="modal-footer" style="overflow: visible">
 
-          <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          
+    <div class="dropdown ">
+              <button class="btn btn-secondary dropdown-toggle " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                 Citation Format
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -249,6 +256,7 @@
               </ul>
             </div>
 
+
         <button type="button" class="btn btn-secondary" onclick="copyToClipboard('10.1016/j.cag.2025.104224BibTeX')"><i class="fa-solid fa-copy"></i> Copy</button>
       </div>
     </div>
@@ -287,8 +295,9 @@
       </div>
       <div class="modal-footer" style="overflow: visible">
 
-          <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          
+    <div class="dropdown ">
+              <button class="btn btn-secondary dropdown-toggle " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                 Citation Format
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -369,6 +378,7 @@
 }`, '10.29007/3csjBibTeX', 'mla')">MLA</a></li>
               </ul>
             </div>
+
 
         <button type="button" class="btn btn-secondary" onclick="copyToClipboard('10.29007/3csjBibTeX')"><i class="fa-solid fa-copy"></i> Copy</button>
       </div>
@@ -550,7 +560,6 @@
           if (!res.ok) continue;
           const xml = await res.text();
           config.templates.add(name, xml);
-          console.log(`Loaded style: ${name}`);
         } catch (err) {
           console.warn(`Could not load style ${name}:`, err);
         }
