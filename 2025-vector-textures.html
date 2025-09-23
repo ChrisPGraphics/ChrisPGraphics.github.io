@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Christopher Palazzolo</title>
+    <title>By-Example Synthesis of Vector Textures</title>
 
 
 
@@ -46,9 +46,20 @@
     </style>
 
 
-    <meta name="keywords" content="Computer Graphics, Optimizers, AI">
-    <meta name="description" content="My name is Christopher Palazzolo. I am interested in generative AI and computer graphics research. I am currently doing my Master's degree in Computer Science at Carleton University under the supervision of Dr. David Mould and Dr. Oliver van Kaick. I am a member of the Graphics, Imaging, and Games Lab.">
-    <meta name="author" content="Christopher Palazzolo">
+    
+    <link rel="icon" type="image/png" href="static/images/vector_textures/teaser.png"/>
+    
+
+    
+    <meta name="description" content="We propose a new method for synthesizing an arbitrarily sized novel vector texture given a single raster exemplar. In an analysis phase, our method first segments the exemplar to extract primary textons, secondary textons, and a palette of background colors. Then, it clusters the primary textons into categories based on visual similarity, and computes a descriptor to capture each texton's neighborhood and inter-category relationships. In the synthesis phase, our method first constructs a gradient field with a set of control points containing colors from the background palette. Next, it places primary textons based on the descriptors, in order to replicate a similar texton context as in the exemplar. The method also places secondary textons to complement the background detail. We compare our method to previous work with a wide range of perceptual-based metrics, and show that we are able to synthesize textures directly in vector format with quality similar to methods based on raster image synthesis.">
+    
+
+    
+    <meta name="keywords" content="Texture Synthesis, Image Segmentation, Vector Graphics">
+    
+
+    <meta name="author" content="<b>Christopher Palazzolo</b>, Oliver van Kaick, David Mould">
+
 
 
 </head>
@@ -79,133 +90,218 @@
 
 <div class="container border-top border-bottom py-3 px-3">
     
-    <h1 role="heading" aria-level="1">Christopher Palazzolo</h1>
-    <p role="region" aria-label="My Biography">My name is Christopher Palazzolo. I am interested in generative AI and computer graphics research. I am currently doing my Master's degree in Computer Science at Carleton University under the supervision of Dr. David Mould and Dr. Oliver van Kaick. I am a member of the Graphics, Imaging, and Games Lab.</p>
+    <h1 class="h2" role="heading" aria-level="1">By-Example Synthesis of Vector Textures</h1>
+    <span role="region" aria-label="Author list"><b>Christopher Palazzolo</b>, Oliver van Kaick, David Mould</span>
 
-    <h2 id="publications" role="heading" aria-level="2">Publications</h2>
+    <div class="mb-4">
+        
+            <a class="btn btn-secondary btn-sm mt-2 mr-1" href="https://github.com/ChrisPGraphics/ByExampleSynthesisOfVectorTextures" aria-label="Code"><i class="fa-brands fa-github"></i> Code</a>
+        
+            <a class="btn btn-secondary btn-sm mt-2 mr-1" href="static/papers/vector_texture_synthesis.pdf" aria-label="PDF"><i class="fa-solid fa-file-pdf"></i> PDF</a>
+        
 
-    
-        <div class="card mb-3" role="region" aria-label="By-Example Synthesis of Vector Textures">
-            <div class="card-body pt-2 pb-0 px-2">
+        
+            <button class="btn btn-secondary btn-sm mt-2 mr-1" data-bs-toggle="modal" data-bs-target="#10.1016/j.cag.2025.104224"><i class="fa-solid fa-file-lines"></i> BibTeX</button>
+        
 
-        <div class="w-100" style="min-height: 85px; margin-bottom: 10px">
-            
-            <img
-                    src="static/images/vector_textures/teaser.png" height="85" width="150" class="float-left" alt="By-Example Synthesis of Vector Textures Teaser Image" style="object-fit: cover; cursor: pointer"
-                    onclick="showFullscreenFigure('static/images/vector_textures/teaser.png', 'Teaser Image', `By-Example Synthesis of Vector Textures`)"
-                    role="button"
-            >
-            
-
-            <div style="padding-left: 160px">
-                <b>By-Example Synthesis of Vector Textures</b>, Pacific Graphics 2025, 2025<br>
-                <i><b>Christopher Palazzolo</b>, Oliver van Kaick, David Mould</i>
-                <br>
-
-                
-                    <a class="btn btn-secondary btn-sm mt-1 mr-1" href="https://github.com/ChrisPGraphics/ByExampleSynthesisOfVectorTextures"><i class="fa-brands fa-github"></i> Code</a>
-                
-                    <a class="btn btn-secondary btn-sm mt-1 mr-1" href="static/papers/vector_texture_synthesis.pdf"><i class="fa-solid fa-file-pdf"></i> PDF</a>
-                
-
-                
-                    <a class="btn btn-secondary btn-sm mt-1 mr-1" href="2025-vector-textures.html"><i class="fa-solid fa-circle-info"></i> Project Page</a>
-                
-
-                
-                    <button class="btn btn-secondary btn-sm mt-1 mr-1" data-bs-toggle="modal" data-bs-target="#10.1016/j.cag.2025.104224"><i class="fa-brands fa-tex"></i> BibTeX</button>
-                
-
-
-                <a class="btn btn-secondary btn-sm mt-1 mr-1" href="https://doi.org/10.1016/j.cag.2025.104224"><i class="ai ai-doi"></i> DOI</a>
-
-            </div>
-        </div>
-
-        <p>We propose a new method for synthesizing an arbitrarily sized novel vector texture given a single raster exemplar. In an analysis phase, our method first segments the exemplar to extract primary textons, secondary textons, and a palette of background colors. Then, it clusters the primary textons into categories based on visual similarity, and computes a descriptor to capture each texton's neighborhood and inter-category relationships. In the synthesis phase, our method first constructs a gradient field with a set of control points containing colors from the background palette. Next, it places primary textons based on the descriptors, in order to replicate a similar texton context as in the exemplar. The method also places secondary textons to complement the background detail. We compare our method to previous work with a wide range of perceptual-based metrics, and show that we are able to synthesize textures directly in vector format with quality similar to methods based on raster image synthesis.</p>
-
-                          </div>
-        </div>
-
-    
-        <div class="card mb-3" role="region" aria-label="Breaking art: Synthesizing abstract expressionism through image rearrangement">
-            <div class="card-body pt-2 pb-0 px-2">
-
-        <div class="w-100" style="min-height: 85px; margin-bottom: 10px">
-            
-            <img
-                    src="static/images/breaking_art/teaser.png" height="85" width="150" class="float-left" alt="Breaking art: Synthesizing abstract expressionism through image rearrangement Teaser Image" style="object-fit: cover; cursor: pointer"
-                    onclick="showFullscreenFigure('static/images/breaking_art/teaser.png', 'Teaser Image', `Breaking art: Synthesizing abstract expressionism through image rearrangement`)"
-                    role="button"
-            >
-            
-
-            <div style="padding-left: 160px">
-                <b>Breaking art: Synthesizing abstract expressionism through image rearrangement</b>, Computers & Graphics, 2025<br>
-                <i><b>Christopher Palazzolo</b>, Oliver van Kaick, David Mould</i>
-                <br>
-
-                
-                    <a class="btn btn-secondary btn-sm mt-1 mr-1" href="https://github.com/ChrisPGraphics/BreakingArt"><i class="fa-brands fa-github"></i> Code</a>
-                
-                    <a class="btn btn-secondary btn-sm mt-1 mr-1" href="static/papers/breaking_art.pdf"><i class="fa-solid fa-file-pdf"></i> PDF</a>
-                
-
-                
-                    <a class="btn btn-secondary btn-sm mt-1 mr-1" href="2025-breaking-art.html"><i class="fa-solid fa-circle-info"></i> Project Page</a>
-                
-
-                
-                    <button class="btn btn-secondary btn-sm mt-1 mr-1" data-bs-toggle="modal" data-bs-target="#10.1016/j.cag.2025.104224"><i class="fa-brands fa-tex"></i> BibTeX</button>
-                
-
-
-                <a class="btn btn-secondary btn-sm mt-1 mr-1" href="https://doi.org/10.1016/j.cag.2025.104224"><i class="ai ai-doi"></i> DOI</a>
-
-            </div>
-        </div>
-
-        <p>We present an algorithm that creates interesting abstract expressionist images from segments of an input image. The algorithm operates by first segmenting the input image at multiple scales, then redistributing the resulting segments across the image plane to obtain an aesthetic abstract output. Larger segments are placed using neighborhood-aware descriptors, and smaller segments are arranged in a Poisson disk distribution. In our thorough analysis, we show that our results score highly according to several relevant aesthetic metrics, and that our style is indeed abstract expressionism. The results are visually appealing, provided the exemplar has a somewhat diverse color pallette and some amount of structure.</p>
-
-                          </div>
-        </div>
-
-    
-        <div class="card mb-3" role="region" aria-label="A simulation study on the sustainability of an ecosystem">
-            <div class="card-body pt-2 pb-0 px-2">
-
-        <div class="w-100" style="min-height: 85px; margin-bottom: 10px">
-            
-
-            <div >
-                <b>A simulation study on the sustainability of an ecosystem</b>, EPiC Series in Computing, 2024<br>
-                <i><b>Christopher Palazzolo</b>, Sayed Mansour Hashemipoor, Wenying Feng</i>
-                <br>
-
-                
-
-                
-
-                
-                    <button class="btn btn-secondary btn-sm mt-1 mr-1" data-bs-toggle="modal" data-bs-target="#10.29007/3csj"><i class="fa-brands fa-tex"></i> BibTeX</button>
-                
-
-
-                <a class="btn btn-secondary btn-sm mt-1 mr-1" href="https://doi.org/10.29007/3csj"><i class="ai ai-doi"></i> DOI</a>
-
-            </div>
-        </div>
-
-        <p>This paper investigates the sustainability of an ecosystem that involves the consumption and reproduction of wildlife on a day-by-day basis in addition to the growth of plants. Different from the traditional approaches such as the reinforcement learning algorithms or the predator-prey dynamical system analysis, we applied simulation techniques and developed computer programs that manage the evolution of the system. The results provide visualization for the system. Limitations and further improvements of the study are also discussed.</p>
-
-                          </div>
-        </div>
-
-    
+        <a class="btn btn-secondary btn-sm mt-2 mr-1" href="https://doi.org/10.1016/j.cag.2025.104224"><i class="ai ai-doi"></i> DOI</a>
+    </div>
 
     
         
             
+    <div class="card mb-3" role="region" aria-label="Abstract">
+        <div class="card-body pt-2 pb-0">
+            <h2 class="h3">Abstract</h2>
+
+            
+                <div class="row px-2">
+                
+                    
+    
+        <img
+                src="static/images/vector_textures/teaser.png" alt="Teaser image" class="img-fluid" role="button"
+                onclick="showFullscreenFigure(`static/images/vector_textures/teaser.png`, `Teaser image`, `Abstract`)" style="cursor: pointer"
+        >
+    
+
+                
+                </div>
+            
+
+            
+                <p>We propose a new method for synthesizing an arbitrarily sized novel vector texture given a single raster exemplar. In an analysis phase, our method first segments the exemplar to extract primary textons, secondary textons, and a palette of background colors. Then, it clusters the primary textons into categories based on visual similarity, and computes a descriptor to capture each texton's neighborhood and inter-category relationships. In the synthesis phase, our method first constructs a gradient field with a set of control points containing colors from the background palette. Next, it places primary textons based on the descriptors, in order to replicate a similar texton context as in the exemplar. The method also places secondary textons to complement the background detail. We compare our method to previous work with a wide range of perceptual-based metrics, and show that we are able to synthesize textures directly in vector format with quality similar to methods based on raster image synthesis.</p>
+            
+        </div>
+    </div>
+
+        
+    
+
+    
+        
+    <div class="card mb-3" role="region" aria-label="Vector Interpolation">
+        <div class="card-body pt-2 pb-0">
+            <h2 class="h3">Vector Interpolation</h2>
+
+            
+                <div class="row px-2">
+                
+                    
+    
+        <div class="aspect-ratio">
+            <iframe src="https://www.youtube.com/embed/Rof4XJI9CZ8" class="w-100 img-fluid" title="This video demonstrates the difference between a basic raster cross fade, and vector interpolation where the textons of the source texture move and warp into the textons of another." allow="fullscreen;"></iframe>
+        </div>
+    
+
+                
+                </div>
+            
+
+            
+                <p>A virtual 3D art gallery showcasing some of our results.</p>
+            
+        </div>
+    </div>
+
+    
+        
+    <div class="card mb-3" role="region" aria-label="More coming soon">
+        <div class="card-body pt-2 pb-0">
+            <h2 class="h3">More coming soon</h2>
+
+            
+                <div class="row px-2">
+                
+                    
+    
+        <img
+                src="https://placehold.co/600x400" alt="WIP" class="img-fluid" role="button"
+                onclick="showFullscreenFigure(`https://placehold.co/600x400`, `WIP`, `More coming soon`)" style="cursor: pointer"
+        >
+    
+
+                
+                </div>
+            
+
+            
+                <p>WIP</p>
+            
+        </div>
+    </div>
+
+    
+
+    
+        <div class="card mb-3">
+            <div class="card-body pt-2 pb-2">
+                <button type="button" class="btn btn-secondary float-right btn-sm" onclick="copyToClipboard('BibTeXPage')"><i class="fa-solid fa-copy"></i> Copy</button>
+                
+    <div class="dropdown float-right mx-2">
+              <button class="btn btn-secondary dropdown-toggle btn-sm" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Citation Format
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="javascript: void(0)" onclick="setCitation(`@article{PALAZZOLO2025104224,
+	title = {Breaking art: Synthesizing abstract expressionism through image rearrangement},
+	journal = {Computers & Graphics},
+	volume = {129},
+	pages = {104224},
+	year = {2025},
+	issn = {0097-8493},
+	doi = {https://doi.org/10.1016/j.cag.2025.104224},
+	url = {https://www.sciencedirect.com/science/article/pii/S0097849325000652},
+	author = {Christopher Palazzolo and Oliver {van Kaick} and David Mould},
+	keywords = {Abstract art synthesis, Image generation, Image segmentation}
+}`, 'BibTeXPage', 'bibtex')">BibTeX</a></li>
+                <li><a class="dropdown-item" href="javascript: void(0)" onclick="setCitation(`@article{PALAZZOLO2025104224,
+	title = {Breaking art: Synthesizing abstract expressionism through image rearrangement},
+	journal = {Computers & Graphics},
+	volume = {129},
+	pages = {104224},
+	year = {2025},
+	issn = {0097-8493},
+	doi = {https://doi.org/10.1016/j.cag.2025.104224},
+	url = {https://www.sciencedirect.com/science/article/pii/S0097849325000652},
+	author = {Christopher Palazzolo and Oliver {van Kaick} and David Mould},
+	keywords = {Abstract art synthesis, Image generation, Image segmentation}
+}`, 'BibTeXPage', 'acm')">ACM</a></li>
+                <li><a class="dropdown-item" href="javascript: void(0)" onclick="setCitation(`@article{PALAZZOLO2025104224,
+	title = {Breaking art: Synthesizing abstract expressionism through image rearrangement},
+	journal = {Computers & Graphics},
+	volume = {129},
+	pages = {104224},
+	year = {2025},
+	issn = {0097-8493},
+	doi = {https://doi.org/10.1016/j.cag.2025.104224},
+	url = {https://www.sciencedirect.com/science/article/pii/S0097849325000652},
+	author = {Christopher Palazzolo and Oliver {van Kaick} and David Mould},
+	keywords = {Abstract art synthesis, Image generation, Image segmentation}
+}`, 'BibTeXPage', 'ieee')">IEEE</a></li>
+                <li><a class="dropdown-item" href="javascript: void(0)" onclick="setCitation(`@article{PALAZZOLO2025104224,
+	title = {Breaking art: Synthesizing abstract expressionism through image rearrangement},
+	journal = {Computers & Graphics},
+	volume = {129},
+	pages = {104224},
+	year = {2025},
+	issn = {0097-8493},
+	doi = {https://doi.org/10.1016/j.cag.2025.104224},
+	url = {https://www.sciencedirect.com/science/article/pii/S0097849325000652},
+	author = {Christopher Palazzolo and Oliver {van Kaick} and David Mould},
+	keywords = {Abstract art synthesis, Image generation, Image segmentation}
+}`, 'BibTeXPage', 'apa')">APA</a></li>
+                <li><a class="dropdown-item" href="javascript: void(0)" onclick="setCitation(`@article{PALAZZOLO2025104224,
+	title = {Breaking art: Synthesizing abstract expressionism through image rearrangement},
+	journal = {Computers & Graphics},
+	volume = {129},
+	pages = {104224},
+	year = {2025},
+	issn = {0097-8493},
+	doi = {https://doi.org/10.1016/j.cag.2025.104224},
+	url = {https://www.sciencedirect.com/science/article/pii/S0097849325000652},
+	author = {Christopher Palazzolo and Oliver {van Kaick} and David Mould},
+	keywords = {Abstract art synthesis, Image generation, Image segmentation}
+}`, 'BibTeXPage', 'mla')">MLA</a></li>
+              </ul>
+            </div>
+
+                <h2 class="h3" role="heading" aria-level="2">Citation</h2>
+                <div id="BibTeXPage" tabindex="0" role="region" aria-label="BibTeX Code">
+                    <pre>@article{PALAZZOLO2025104224,
+	title = {Breaking art: Synthesizing abstract expressionism through image rearrangement},
+	journal = {Computers & Graphics},
+	volume = {129},
+	pages = {104224},
+	year = {2025},
+	issn = {0097-8493},
+	doi = {https://doi.org/10.1016/j.cag.2025.104224},
+	url = {https://www.sciencedirect.com/science/article/pii/S0097849325000652},
+	author = {Christopher Palazzolo and Oliver {van Kaick} and David Mould},
+	keywords = {Abstract art synthesis, Image generation, Image segmentation}
+}</pre>
+                </div>
+            </div>
+        </div>
+    
+
+    
+        
+    <div class="card mb-3" role="region" aria-label="Acknowledgements">
+        <div class="card-body pt-2 pb-0">
+            <h2 class="h3">Acknowledgements</h2>
+
+            
+
+            
+                <p>We thank the anonymous reviewers for their valuable feedback. This work was partially supported by the Natural Sciences and Engineering Research Council of Canada (NSERC) and Carleton University. We would also like to thank the members of the Graphics, Imaging, and Games Lab (GIGL) as well as our friends outside the lab for their suggestions and comments.</p>
+            
+        </div>
+    </div>
+
+    
+
+    
 
 <div class="modal fade" tabindex="-1" id="10.1016/j.cag.2025.104224"  aria-labelledby="10.1016/j.cag.2025.104224Label" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
@@ -307,236 +403,6 @@
 </div>
 
 
-        
-    
-        
-            
-
-<div class="modal fade" tabindex="-1" id="10.1016/j.cag.2025.104224"  aria-labelledby="10.1016/j.cag.2025.104224Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
-    <div class="modal-content" style="overflow: visible;">
-      <div class="modal-header">
-        <h5 class="modal-title fs-5" id="10.1016/j.cag.2025.104224Label">Breaking art: Synthesizing abstract expressionism through image rearrangement BibTeX</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body" id="10.1016/j.cag.2025.104224BibTeX">
-        <pre>@article{PALAZZOLO2025104224,
-	title = {Breaking art: Synthesizing abstract expressionism through image rearrangement},
-	journal = {Computers & Graphics},
-	volume = {129},
-	pages = {104224},
-	year = {2025},
-	issn = {0097-8493},
-	doi = {https://doi.org/10.1016/j.cag.2025.104224},
-	url = {https://www.sciencedirect.com/science/article/pii/S0097849325000652},
-	author = {Christopher Palazzolo and Oliver {van Kaick} and David Mould},
-	keywords = {Abstract art synthesis, Image generation, Image segmentation}
-}</pre>
-      </div>
-      <div class="modal-footer" style="overflow: visible">
-
-          
-    <div class="dropdown ">
-              <button class="btn btn-secondary dropdown-toggle " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                Citation Format
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="javascript: void(0)" onclick="setCitation(`@article{PALAZZOLO2025104224,
-	title = {Breaking art: Synthesizing abstract expressionism through image rearrangement},
-	journal = {Computers & Graphics},
-	volume = {129},
-	pages = {104224},
-	year = {2025},
-	issn = {0097-8493},
-	doi = {https://doi.org/10.1016/j.cag.2025.104224},
-	url = {https://www.sciencedirect.com/science/article/pii/S0097849325000652},
-	author = {Christopher Palazzolo and Oliver {van Kaick} and David Mould},
-	keywords = {Abstract art synthesis, Image generation, Image segmentation}
-}`, '10.1016/j.cag.2025.104224BibTeX', 'bibtex')">BibTeX</a></li>
-                <li><a class="dropdown-item" href="javascript: void(0)" onclick="setCitation(`@article{PALAZZOLO2025104224,
-	title = {Breaking art: Synthesizing abstract expressionism through image rearrangement},
-	journal = {Computers & Graphics},
-	volume = {129},
-	pages = {104224},
-	year = {2025},
-	issn = {0097-8493},
-	doi = {https://doi.org/10.1016/j.cag.2025.104224},
-	url = {https://www.sciencedirect.com/science/article/pii/S0097849325000652},
-	author = {Christopher Palazzolo and Oliver {van Kaick} and David Mould},
-	keywords = {Abstract art synthesis, Image generation, Image segmentation}
-}`, '10.1016/j.cag.2025.104224BibTeX', 'acm')">ACM</a></li>
-                <li><a class="dropdown-item" href="javascript: void(0)" onclick="setCitation(`@article{PALAZZOLO2025104224,
-	title = {Breaking art: Synthesizing abstract expressionism through image rearrangement},
-	journal = {Computers & Graphics},
-	volume = {129},
-	pages = {104224},
-	year = {2025},
-	issn = {0097-8493},
-	doi = {https://doi.org/10.1016/j.cag.2025.104224},
-	url = {https://www.sciencedirect.com/science/article/pii/S0097849325000652},
-	author = {Christopher Palazzolo and Oliver {van Kaick} and David Mould},
-	keywords = {Abstract art synthesis, Image generation, Image segmentation}
-}`, '10.1016/j.cag.2025.104224BibTeX', 'ieee')">IEEE</a></li>
-                <li><a class="dropdown-item" href="javascript: void(0)" onclick="setCitation(`@article{PALAZZOLO2025104224,
-	title = {Breaking art: Synthesizing abstract expressionism through image rearrangement},
-	journal = {Computers & Graphics},
-	volume = {129},
-	pages = {104224},
-	year = {2025},
-	issn = {0097-8493},
-	doi = {https://doi.org/10.1016/j.cag.2025.104224},
-	url = {https://www.sciencedirect.com/science/article/pii/S0097849325000652},
-	author = {Christopher Palazzolo and Oliver {van Kaick} and David Mould},
-	keywords = {Abstract art synthesis, Image generation, Image segmentation}
-}`, '10.1016/j.cag.2025.104224BibTeX', 'apa')">APA</a></li>
-                <li><a class="dropdown-item" href="javascript: void(0)" onclick="setCitation(`@article{PALAZZOLO2025104224,
-	title = {Breaking art: Synthesizing abstract expressionism through image rearrangement},
-	journal = {Computers & Graphics},
-	volume = {129},
-	pages = {104224},
-	year = {2025},
-	issn = {0097-8493},
-	doi = {https://doi.org/10.1016/j.cag.2025.104224},
-	url = {https://www.sciencedirect.com/science/article/pii/S0097849325000652},
-	author = {Christopher Palazzolo and Oliver {van Kaick} and David Mould},
-	keywords = {Abstract art synthesis, Image generation, Image segmentation}
-}`, '10.1016/j.cag.2025.104224BibTeX', 'mla')">MLA</a></li>
-              </ul>
-            </div>
-
-
-        <button type="button" class="btn btn-secondary" onclick="copyToClipboard('10.1016/j.cag.2025.104224BibTeX')"><i class="fa-solid fa-copy"></i> Copy</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-        
-    
-        
-            
-
-<div class="modal fade" tabindex="-1" id="10.29007/3csj"  aria-labelledby="10.29007/3csjLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
-    <div class="modal-content" style="overflow: visible;">
-      <div class="modal-header">
-        <h5 class="modal-title fs-5" id="10.29007/3csjLabel">A simulation study on the sustainability of an ecosystem BibTeX</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body" id="10.29007/3csjBibTeX">
-        <pre>@inproceedings{PALAZZOLO20253csj,
-	author = {Christopher Palazzolo and Sayed Mansour Hashemipoor and Wenying Feng},
-	title = {A simulation study on the sustainability of an ecosystem},
-	booktitle = {Proceedings of the 16th International Conference on Bioinformatics and Computational Biology (BICOB-2024)},
-	editor = {Hisham Al-Mubaid and Tamer Aldwairi and Oliver Eulenstein},
-	series = {EPiC Series in Computing},
-	volume = {101},
-	publisher = {EasyChair},
-	bibsource = {EasyChair, https://easychair.org},
-	issn = {2398-7340},
-	url = {/publications/paper/6zLH},
-	doi = {10.29007/3csj},
-	pages = {93-102},
-	year = {2024}
-}</pre>
-      </div>
-      <div class="modal-footer" style="overflow: visible">
-
-          
-    <div class="dropdown ">
-              <button class="btn btn-secondary dropdown-toggle " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                Citation Format
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="javascript: void(0)" onclick="setCitation(`@inproceedings{PALAZZOLO20253csj,
-	author = {Christopher Palazzolo and Sayed Mansour Hashemipoor and Wenying Feng},
-	title = {A simulation study on the sustainability of an ecosystem},
-	booktitle = {Proceedings of the 16th International Conference on Bioinformatics and Computational Biology (BICOB-2024)},
-	editor = {Hisham Al-Mubaid and Tamer Aldwairi and Oliver Eulenstein},
-	series = {EPiC Series in Computing},
-	volume = {101},
-	publisher = {EasyChair},
-	bibsource = {EasyChair, https://easychair.org},
-	issn = {2398-7340},
-	url = {/publications/paper/6zLH},
-	doi = {10.29007/3csj},
-	pages = {93-102},
-	year = {2024}
-}`, '10.29007/3csjBibTeX', 'bibtex')">BibTeX</a></li>
-                <li><a class="dropdown-item" href="javascript: void(0)" onclick="setCitation(`@inproceedings{PALAZZOLO20253csj,
-	author = {Christopher Palazzolo and Sayed Mansour Hashemipoor and Wenying Feng},
-	title = {A simulation study on the sustainability of an ecosystem},
-	booktitle = {Proceedings of the 16th International Conference on Bioinformatics and Computational Biology (BICOB-2024)},
-	editor = {Hisham Al-Mubaid and Tamer Aldwairi and Oliver Eulenstein},
-	series = {EPiC Series in Computing},
-	volume = {101},
-	publisher = {EasyChair},
-	bibsource = {EasyChair, https://easychair.org},
-	issn = {2398-7340},
-	url = {/publications/paper/6zLH},
-	doi = {10.29007/3csj},
-	pages = {93-102},
-	year = {2024}
-}`, '10.29007/3csjBibTeX', 'acm')">ACM</a></li>
-                <li><a class="dropdown-item" href="javascript: void(0)" onclick="setCitation(`@inproceedings{PALAZZOLO20253csj,
-	author = {Christopher Palazzolo and Sayed Mansour Hashemipoor and Wenying Feng},
-	title = {A simulation study on the sustainability of an ecosystem},
-	booktitle = {Proceedings of the 16th International Conference on Bioinformatics and Computational Biology (BICOB-2024)},
-	editor = {Hisham Al-Mubaid and Tamer Aldwairi and Oliver Eulenstein},
-	series = {EPiC Series in Computing},
-	volume = {101},
-	publisher = {EasyChair},
-	bibsource = {EasyChair, https://easychair.org},
-	issn = {2398-7340},
-	url = {/publications/paper/6zLH},
-	doi = {10.29007/3csj},
-	pages = {93-102},
-	year = {2024}
-}`, '10.29007/3csjBibTeX', 'ieee')">IEEE</a></li>
-                <li><a class="dropdown-item" href="javascript: void(0)" onclick="setCitation(`@inproceedings{PALAZZOLO20253csj,
-	author = {Christopher Palazzolo and Sayed Mansour Hashemipoor and Wenying Feng},
-	title = {A simulation study on the sustainability of an ecosystem},
-	booktitle = {Proceedings of the 16th International Conference on Bioinformatics and Computational Biology (BICOB-2024)},
-	editor = {Hisham Al-Mubaid and Tamer Aldwairi and Oliver Eulenstein},
-	series = {EPiC Series in Computing},
-	volume = {101},
-	publisher = {EasyChair},
-	bibsource = {EasyChair, https://easychair.org},
-	issn = {2398-7340},
-	url = {/publications/paper/6zLH},
-	doi = {10.29007/3csj},
-	pages = {93-102},
-	year = {2024}
-}`, '10.29007/3csjBibTeX', 'apa')">APA</a></li>
-                <li><a class="dropdown-item" href="javascript: void(0)" onclick="setCitation(`@inproceedings{PALAZZOLO20253csj,
-	author = {Christopher Palazzolo and Sayed Mansour Hashemipoor and Wenying Feng},
-	title = {A simulation study on the sustainability of an ecosystem},
-	booktitle = {Proceedings of the 16th International Conference on Bioinformatics and Computational Biology (BICOB-2024)},
-	editor = {Hisham Al-Mubaid and Tamer Aldwairi and Oliver Eulenstein},
-	series = {EPiC Series in Computing},
-	volume = {101},
-	publisher = {EasyChair},
-	bibsource = {EasyChair, https://easychair.org},
-	issn = {2398-7340},
-	url = {/publications/paper/6zLH},
-	doi = {10.29007/3csj},
-	pages = {93-102},
-	year = {2024}
-}`, '10.29007/3csjBibTeX', 'mla')">MLA</a></li>
-              </ul>
-            </div>
-
-
-        <button type="button" class="btn btn-secondary" onclick="copyToClipboard('10.29007/3csjBibTeX')"><i class="fa-solid fa-copy"></i> Copy</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-        
-    
 
 
 </div>
