@@ -45,8 +45,19 @@
 }
 
 .project-image{
+    max-height: 300px;
+    max-width: 100%;
+    width: auto;
+    display: block;
     
+    margin: auto;
     
+}
+
+.image-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
 }
     </style>
 
@@ -130,12 +141,12 @@
             <h2 class="h3">Abstract</h2>
 
             
-                <div class="row px-2">
+                <div class="row px-2 image-container">
                 
                     
     
         <img
-                src="static/images/breaking_art/teaser.png" alt="Teaser image" class="img-fluid project-image" role="button"
+                src="static/images/breaking_art/teaser.png" alt="Teaser image" class="project-image" role="button"
                 onclick="showFullscreenFigure(`static/images/breaking_art/teaser.png`, `Teaser image`, `Abstract`)" style="cursor: pointer"
         >
     
@@ -160,12 +171,12 @@
             <h2 class="h3">Some Results</h2>
 
             
-                <div class="row px-2">
+                <div class="row px-2 image-container">
                 
                     
     
         <img
-                src="static/images/breaking_art/results.png" alt="Four results of our algorithm with their exemplar" class="img-fluid project-image" role="button"
+                src="static/images/breaking_art/results.png" alt="Four results of our algorithm with their exemplar" class="project-image" role="button"
                 onclick="showFullscreenFigure(`static/images/breaking_art/results.png`, `Four results of our algorithm with their exemplar`, `Some Results`)" style="cursor: pointer"
         >
     
@@ -187,12 +198,12 @@
             <h2 class="h3">Virtual 3D Art Gallery</h2>
 
             
-                <div class="row px-2">
+                <div class="row px-2 image-container">
                 
                     
     
-        <div class="aspect-ratio">
-            <iframe src="https://www.youtube.com/embed/JAzxg2WRWDw" class="w-100 img-fluid" title="A video walking through a 3D art gallery where our results are on display." allow="fullscreen;"></iframe>
+        <div>
+            <iframe src="https://www.youtube.com/embed/JAzxg2WRWDw" class="project-image" title="A video walking through a 3D art gallery where our results are on display." allow="fullscreen;"></iframe>
         </div>
     
 
@@ -213,12 +224,12 @@
             <h2 class="h3">Analysis and Synthesis</h2>
 
             
-                <div class="row px-2">
+                <div class="row px-2 image-container">
                 
                     
     
         <img
-                src="static/images/breaking_art/process.png" alt="A high-level overview of our analysis and synthesis processes" class="img-fluid project-image" role="button"
+                src="static/images/breaking_art/process.png" alt="A high-level overview of our analysis and synthesis processes" class="project-image" role="button"
                 onclick="showFullscreenFigure(`static/images/breaking_art/process.png`, `A high-level overview of our analysis and synthesis processes`, `Analysis and Synthesis`)" style="cursor: pointer"
         >
     
@@ -240,12 +251,12 @@
             <h2 class="h3">Failure Cases</h2>
 
             
-                <div class="row px-2">
+                <div class="row px-2 image-container">
                 
                     
     
         <img
-                src="static/images/breaking_art/failure_cases.png" alt="Three failure cases when the exemplar does not contain distinct features." class="img-fluid project-image" role="button"
+                src="static/images/breaking_art/failure_cases.png" alt="Three failure cases when the exemplar does not contain distinct features." class="project-image" role="button"
                 onclick="showFullscreenFigure(`static/images/breaking_art/failure_cases.png`, `Three failure cases when the exemplar does not contain distinct features.`, `Failure Cases`)" style="cursor: pointer"
         >
     
